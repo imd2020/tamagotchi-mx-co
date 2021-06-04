@@ -4,6 +4,7 @@ function setup() {
 
   frameRate(30);
 }
+window.setup = setup;
 
 window.addEventListener("resize", function () {
   resizeCanvas(windowWidth, windowHeight);
