@@ -5,6 +5,7 @@ let button1 = new LeadButton(200, 200, 100, 100);
 function mouseClicked() {
   button1.hitTest();
 }
+
 window.mouseClicked = mouseClicked;
 
 function draw() {
@@ -12,4 +13,5 @@ function draw() {
 
   button1.display();
 }
+
 window.draw = draw;
