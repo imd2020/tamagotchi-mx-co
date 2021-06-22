@@ -1,5 +1,5 @@
 function setup() {
-  var canvasSetting = createCanvas(windowWidth, windowHeight);
+  var canvasSetting = createCanvas(1080, 720);
   canvasSetting.parent("tamagotchiSpot");
 
   frameRate(30);

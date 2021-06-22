@@ -6,14 +6,22 @@ export default class Button {
     this.buttonHeight = buttonHeight;
   }
 
-  hitTest() {
+  hitTestRec() {
     if (
-      mouseX >= this.buttonX &&
-      mouseX <= this.buttonX + this.buttonWidth &&
-      mouseY >= this.buttonY &&
-      mouseY <= this.buttonY + this.buttonHeight
+      mouseX >= this.buttonX - this.buttonWidth / 2 &&
+      mouseX <= this.buttonX + this.buttonWidth / 2 &&
+      mouseY >= this.buttonY - this.buttonHeight / 2 &&
+      mouseY <= this.buttonY + this.buttonHeight / 2
     ) {
-      console.log("hallo");
+      // console.log("hallo");
+      return true;
+    }
+  }
+  hitTestCircle() {
+    let d = dist(mouseX, mouseY, this.buttonX, this.buttonY);
+
+    if (d <= this.buttonWidth / 2) {
+      return true;
     }
   }
 }
