@@ -77,6 +77,7 @@ export default class Rocket {
         flamesLeft.display();
         flamesLeft.animation();
 
+        // löscht jedes Objekt mit einer opacity von unter -10
         if (flamesLeft.flameOpacity <= -10) {
           this.flamesLeftList.splice(index, 1);
           // console.log(index);
@@ -91,6 +92,7 @@ export default class Rocket {
         flamesMiddle.display();
         flamesMiddle.animation();
 
+        // löscht jedes Objekt mit einer opacity von unter -10
         if (flamesMiddle.flameOpacity <= -10) {
           this.flamesMiddleList.splice(index, 1);
           // console.log(index);
@@ -104,7 +106,7 @@ export default class Rocket {
       this.flamesRightList.forEach((flamesRight, index) => {
         flamesRight.display();
         flamesRight.animation();
-
+        // löscht jedes Objekt mit einer opacity von unter -10
         if (flamesRight.flameOpacity <= -10) {
           this.flamesRightList.splice(index, 1);
         }
@@ -126,7 +128,8 @@ export default class Rocket {
     this.rocketX = this.rocketX + this.counter;
 
     this.rocketY = this.rocketY - this.counter;
-    this.rocketRotation = this.rocketRotation + this.counter / 8;
+    this.rocketRotation = this.rocketRotation + 0.2;
+
     if (this.rocketX >= 1380) {
       return true;
     }

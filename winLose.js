@@ -29,7 +29,6 @@ export default class WinLose {
       this.animationLose();
     }
     pop();
-    this.animationWin();
     pop();
   }
 

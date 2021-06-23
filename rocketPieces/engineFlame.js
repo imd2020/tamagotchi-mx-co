@@ -39,6 +39,6 @@ export default class EngineFlame {
   animation() {
     this.flameX += this.flameDeviationX;
     this.flameY += 4;
-    this.flameOpacity -= 8;
+    this.flameOpacity -= 6;
   }
 }
