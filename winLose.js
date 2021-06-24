@@ -51,13 +51,13 @@ export default class WinLose {
     this.resultSinY = sin(this.counter) * 30 + this.resultY;
   }
 
-  gaspAnimation() {
+  gsapAnimation(duration, scale, repeat, yoyo) {
     gsap.to(this, {
-      duration: 3,
-      resultS: 1.2,
+      duration: duration,
+      resultS: scale,
       ease: "elastic",
-      repeat: -1,
-      yoyo: true,
+      repeat: repeat,
+      yoyo: yoyo,
     });
   }
 }

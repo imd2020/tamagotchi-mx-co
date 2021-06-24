@@ -29,8 +29,7 @@ let speedometerRepeatCount = 0; // Wie oft der Tacho gedreht werden. Bei 3 ist S
 let engineIsCorrect = 0; // welche Engine wurde richtig geschaltet. =3 launch; <3 crash
 let timerIsActive = false;
 
-//gsap animation
-result.gaspAnimation();
+let gsapAinimationIsActive = true;
 
 function resetData() {
   rocket.reset();
@@ -237,6 +236,12 @@ function draw() {
     gameScreen();
   } else if (state === "end") {
     endScreen();
+
+    // kann nur einmal die Animation ausführen
+    if (state === "end" && gsapAinimationIsActive === true) {
+      result.gsapAnimation(3, 1.2, -1, true);
+      gsapAinimationIsActive = false;
+    }
   }
   // console.log(timeline.color);
 }
