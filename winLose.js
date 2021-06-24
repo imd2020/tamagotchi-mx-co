@@ -52,7 +52,12 @@ export default class WinLose {
   }
 
   gaspAnimation() {
-    // gsap.to(this, { duration: 2.5, resultY: 200, repeat: -1, yoyo: true });
-    gsap.to(this, { duration: 3, resultS: 1.2,ease:"elastic", repeat: -1, yoyo: true });
+    gsap.to(this, {
+      duration: 3,
+      resultS: 1.2,
+      ease: "elastic",
+      repeat: -1,
+      yoyo: true,
+    });
   }
 }
