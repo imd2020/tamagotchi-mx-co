@@ -3,6 +3,8 @@ export default class WinLose {
     this.resultX = resultX;
     this.resultY = resultY;
 
+    this.resultS = 0.8;
+
     this.resultSinY = 0;
 
     this.resultR = resultR;
@@ -13,21 +15,25 @@ export default class WinLose {
 
   display() {
     push();
+
     translate(this.resultX, this.resultSinY);
 
     push();
     rotate(this.resultR);
+    scale(this.resultS);
     textSize(50);
 
     textAlign(CENTER);
     fill(168, 215, 197);
+
     if (this.myResult === "win") {
-      text("Congratulation\nYou launched successfully", 0, 0);
+      text("Congratulations\nYou launched successfully", 0, 0);
       this.animationWin();
     } else if (this.myResult === "fail") {
-      text("CRASH\nYou failed!", 0, 0);
+      text("Crash\nYou failed!", 0, 0);
       this.animationLose();
     }
+
     pop();
     pop();
   }
@@ -43,5 +49,10 @@ export default class WinLose {
     this.counter += 2;
 
     this.resultSinY = sin(this.counter) * 30 + this.resultY;
+  }
+
+  gaspAnimation() {
+    // gsap.to(this, { duration: 2.5, resultY: 200, repeat: -1, yoyo: true });
+    gsap.to(this, { duration: 3, resultS: 1.2,ease:"elastic", repeat: -1, yoyo: true });
   }
 }

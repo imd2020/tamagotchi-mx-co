@@ -14,7 +14,7 @@ let exitButton = new ScreenSwitchButton(1010, 650, 100, 100, "Exit");
 let timeline = new Timeline(200, 50);
 let rocket = new Rocket(750, 450, 0);
 let speedometer = new Speedometer(200, 450, 90);
-let result = new WinLose(700, 400, 0);
+let result = new WinLose(650, 400, 0);
 
 let stars = [];
 // erzeugt i-mal Objekte
@@ -28,6 +28,9 @@ let speedometerIsActive = false;
 let speedometerRepeatCount = 0; // Wie oft der Tacho gedreht werden. Bei 3 ist Schluss
 let engineIsCorrect = 0; // welche Engine wurde richtig geschaltet. =3 launch; <3 crash
 let timerIsActive = false;
+
+//gsap animation
+result.gaspAnimation();
 
 function resetData() {
   rocket.reset();
