@@ -65,12 +65,12 @@ function startScreen() {
   fill(103, 185, 154);
   stroke(15, 76, 92);
   strokeWeight(4);
-  rect(590, 200, 350, 220, 10);
+  rect(590, 200, 350, 260, 10);
   fill(15, 76, 92);
   noStroke();
   textSize(20);
   text(
-    "Houston we have a problem. \nWe have found errors in the engine.\n\nHelp us to adjust the engine. \nStop the speedometer needle \nat the red marker. \nTo start and stop the needle simply \npress W on your keyboard. ",
+    "Houston we have a problem. \nWe have found errors in the engine.\n\nHelp us to adjust the engine. \nStop the speedometer needle \nat the red marker. \nTo start and stop the needle simply \npress W on your keyboard. \nBe careful, you only have a certain \namount of time to fix it. ",
     600,
     225
   );
