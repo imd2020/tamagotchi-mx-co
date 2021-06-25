@@ -44,6 +44,8 @@ function resetData() {
 
   engineIsCorrect = 0;
   timerIsActive = false;
+
+  gsapAinimationIsActive = true;
 }
 
 function myBackground() {
@@ -239,7 +241,7 @@ function draw() {
 
     // kann nur einmal die Animation ausführen
     if (state === "end" && gsapAinimationIsActive === true) {
-      result.gsapAnimation(3, 1.2, -1, true);
+      result.gsapAnimation(3, 1.2, 1, true);
       gsapAinimationIsActive = false;
     }
   }
