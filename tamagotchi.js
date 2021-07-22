@@ -72,7 +72,7 @@ function startScreen() {
   noStroke();
   textSize(20);
   text(
-    "Houston we have a problem. \nWe have found errors in the engine.\n\nHelp us to adjust the engine. \nStop the speedometer needle \n3 times at the red marker. \nTo start and stop the needle simply \npress W on your keyboard. \nBe careful, you only have a certain \namount of time to fix it. ",
+    "Houston we have a problem. \nWe have found errors in the engine.\n\nHelp us to adjust the engine. \nStop the speedometer needle \nthree times at the red marker. \nTo start and stop the needle simply \npress W on your keyboard. \nBe careful, you only have a certain \namount of time to fix it. ",
     600,
     225
   );
