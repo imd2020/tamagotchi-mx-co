@@ -6,6 +6,7 @@ import EngineFlame from "./rocketPieces/engineFlame.js";
 export default class Rocket {
   constructor(rocketX, rocketY, rocketRotation) {
     this.rocketX = rocketX;
+    this.startRocketX = rocketX;
     this.rocketY = rocketY;
     this.rocketRotation = rocketRotation;
     this.flameLeftIsActive = false;
@@ -136,7 +137,7 @@ export default class Rocket {
   }
 
   reset() {
-    this.rocketX = 750;
+    this.rocketX = this.startRocketX;
     this.rocketY = 450;
     this.rocketRotation = 0;
     this.counter = 0;
